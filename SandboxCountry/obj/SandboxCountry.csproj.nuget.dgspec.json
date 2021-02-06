@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\denis\\Source\\Repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj": {}
+    "C:\\Users\\denis\\source\\repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\denis\\Source\\Repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj": {
+    "C:\\Users\\denis\\source\\repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\denis\\Source\\Repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj",
+        "projectUniqueName": "C:\\Users\\denis\\source\\repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj",
         "projectName": "SandboxCountry",
-        "projectPath": "C:\\Users\\denis\\Source\\Repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj",
+        "projectPath": "C:\\Users\\denis\\source\\repos\\SandboxCountry.Denis\\SandboxCountry\\SandboxCountry.csproj",
         "packagesPath": "C:\\Users\\denis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\denis\\Source\\Repos\\SandboxCountry.Denis\\SandboxCountry\\obj\\",
+        "outputPath": "C:\\Users\\denis\\source\\repos\\SandboxCountry.Denis\\SandboxCountry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\denis\\AppData\\Roaming\\NuGet\\NuGet.Config",
