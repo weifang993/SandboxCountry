@@ -13,10 +13,10 @@ namespace SandboxCountry.Tests
             var ctryManager = new CountryManager();
 
             // act
-            string countryName = ctryManager.GetCountry("CA");
+            var country = ctryManager.GetCountry("CA");
 
             // assert
-            Assert.AreEqual("Canada", countryName);
+            Assert.AreEqual("Canada", country.Name);
         }
     }
 }

@@ -23,6 +23,14 @@ namespace SandboxCountry.Controllers
             return View();
         }
 
+        public IActionResult GetCountryName(CountryData data)
+        {
+            CountryManager manager = new CountryManager();
+            var result = manager.GetCountry(data.Code);
+
+            return View("Index", result);
+        }
+
         public IActionResult Privacy()
         {
             return View();

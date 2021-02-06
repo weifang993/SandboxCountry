@@ -7,10 +7,10 @@ namespace SandboxCountry.Models
 {
     public class CountryManager
     {
-        public string GetCountry(string code)
+        public CountryData GetCountry(string code)
         {
             if (code == "CA")
-                return "Canada";
+                return new CountryData {Code = "CA", Name = "Canada"};
             else
                 return null;
         }

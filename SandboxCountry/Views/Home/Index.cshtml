@@ -1,8 +1,21 @@
-﻿@{
+﻿@model SandboxCountry.Models.CountryData
+
+@{
     ViewData["Title"] = "Home Page";
+
+    string cName = Model?.Name;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Denis' Sandbox!</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<br />
+<br />
+<form asp-controller ="Home" asp-action="GetCountryName" method="post">
+    <label asp-for="Code"></label>
+    <input asp-for="Code" style="width: 50px;"/>&nbsp;<label>@cName</label>
+    <br />
+    <input type="submit" value="Get Country Name" />
+    </form>
