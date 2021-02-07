@@ -3,7 +3,14 @@
 @{
     ViewData["Title"] = "Home Page";
 
-    string cName = Model?.Name;
+    string cName_E = Model?.CountryName_E;
+    string cName_F = Model?.CountryName_F;
+
+    string cName = string.Empty;
+
+    if (!string.IsNullOrEmpty(cName_E))
+        cName = cName_E + " / " + cName_F;
+
 }
 
 <div class="text-center">
@@ -13,9 +20,9 @@
 
 <br />
 <br />
-<form asp-controller ="Home" asp-action="GetCountryName" method="post">
-    <label asp-for="Code"></label>
-    <input asp-for="Code" style="width: 50px;"/>&nbsp;<label>@cName</label>
+<form asp-controller="Home" asp-action="GetCountryName" method="post">
+    <label asp-for="CountryCode_Short"></label>
+    <input asp-for="CountryCode_Short" style="width: 50px;" />&nbsp;<label>@cName</label>
     <br />
     <input type="submit" value="Get Country Name" />
-    </form>
+</form>

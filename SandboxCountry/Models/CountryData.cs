@@ -8,10 +8,19 @@ namespace SandboxCountry.Models
 {
     public class CountryData
     {
-        [DisplayName("Country Code")]
-        public string Code { get; set; }
+        public int Id { get; set; }
 
         [DisplayName("Name (English)")]
-        public string Name { get; set; }
+        public string CountryName_E { get; set; }
+
+        [DisplayName("Name (French)")]
+        public string CountryName_F { get; set; }
+        
+        [DisplayName("Country Code")]
+        public string CountryCode_Short { get; set; }
+        
+        [DisplayName("Country Code (Long)")]
+        public string CountryCode_Long { get; set; }
+
     }
 }

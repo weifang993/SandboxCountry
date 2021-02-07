@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SandboxCountry.Models;
 using System;
@@ -23,10 +24,12 @@ namespace SandboxCountry.Controllers
             return View();
         }
 
-        public IActionResult GetCountryName(CountryData data)
+        public IActionResult GetCountryName([FromServices] IConfiguration configuration, CountryData data)
         {
-            CountryManager manager = new CountryManager();
-            var result = manager.GetCountry(data.Code);
+            string conString = configuration.GetConnectionString("Denis001");
+
+            CountryManager manager = new CountryManager(conString);
+            var result = manager.GetCountry(data.CountryCode_Short);
 
             return View("Index", result);
         }
