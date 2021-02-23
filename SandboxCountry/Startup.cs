@@ -17,12 +17,6 @@ namespace SandboxCountry
 
         public Startup(IConfiguration configuration)
         {
-            //IConfigurationRoot root = new ConfigurationBuilder()
-            //    .AddJsonFile("appsettings.json")
-            //    .Build();
-
-            //Configuration = root as IConfiguration;
-
             Configuration = configuration;
         }
 
