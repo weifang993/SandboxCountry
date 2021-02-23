@@ -1,0 +1,25 @@
+name: sandbox-country-ci
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build:
+    name: Build and Push Docker image to Azure Registry 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.SANDBOX_CREDENTIALS }}
+    - uses: azure/docker-login@v1
+      with:
+        login-server: flasitcr.azurecr.io
+        username: ${{ secrets.SANDBOX_REGISTRY_USERNAME }}
+        password: ${{ secrets.SANDBOX_REGISTRY_PASSWORD }}
+    - run: |
+        docker build -t flasitcr.azurecr.io/sandbox-country:latest . 
+        docker push flasitcr.azurecr.io/sandbox-country:latest
+
+  
