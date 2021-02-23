@@ -19,7 +19,7 @@ jobs:
         username: ${{ secrets.SANDBOX_REGISTRY_USERNAME }}
         password: ${{ secrets.SANDBOX_REGISTRY_PASSWORD }}
     - run: |
-        cd sandbox-country
+        cd SandboxCountry
         docker build -t flasitcr.azurecr.io/sandbox-country:latest -f Dockerfile ..   
         docker push flasitcr.azurecr.io/sandbox-country:latest
 
