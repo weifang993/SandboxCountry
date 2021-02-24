@@ -7,7 +7,7 @@ CREATE TABLE Country (
     country_code_short STRING UNIQUE NOT NULL,
     country_code_long  STRING  NOT NULL,
     CONSTRAINT "primary" PRIMARY KEY (id ASC, country_code_short ASC)
-');
+);
 
 
 /* Create database table entries */
