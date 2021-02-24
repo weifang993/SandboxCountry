@@ -29,6 +29,11 @@ namespace SandboxCountry.Controllers
         {
             var connStringBuilder = new NpgsqlConnectionStringBuilder();
             connStringBuilder.Host = configuration.GetValue<string>("CockroachDB:Host");
+            string host = Environment.GetEnvironmentVariable("COCKROACHDB_PUBLIC_SERVICE_HOST");
+            if(host != null)
+            {
+                connStringBuilder.Host = host;
+            }            
             connStringBuilder.Port = configuration.GetValue<int>("CockroachDB:Port");
             connStringBuilder.SslMode = SslMode.Disable;
             connStringBuilder.Username = configuration.GetValue<string>("CockroachDB:Username");
