@@ -25,6 +25,6 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/SandboxCountry/Dockerfile'
-        buildContext: '**'
+        buildContext: '$(Build.SourcesDirectory)'
         tags: |
           $(tag)
